@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    color: black;
+    /* margin: 0 75px 0 75px; */
+}
+
+
+
+.nav-link:hover{
+    background-color: royalblue;
+}
+.nav-link{
+    color:white; 
+}
+
+
+.profile{
+    margin: 20px 0px;
+    font-size: 40px;
+    }
+
+.body1{
+    /* margin-top: 20px; */
+    /* border-bottom: 1px solid black;
+    border-top: 1px solid black; */
+    background-color: #e9ecef;
+
+    /* background-color: #FFFFCC; */
+    /* background-color: yellowgreen; */
+    /* background: linear-gradient(to bottom, whitesmoke,  yellowgreen (3, 22, 131));    */
+}
+
+
+
+.body1 p{
+    font-size: 20px;
+}
+
+.body1 h5{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.body2{
+    margin-top: 20px;
+}
+.border-KC{
+    /* background-color: #FFFFCC; */
+    border-left: 2px solid;
+}
+    
+
+.item{
+   display: inline-block;
+   margin-bottom: 15px;
+}
+.number{
+    margin-bottom: 15px;
+}
+.form-inline input{
+    width: 80px;
+}
+
+.HoaDon1{
+    
+   
+    list-style: none;
+}
+
+
+.HoaDon{
+    
+    font-size: 20px;
+    font-weight: 700;
+    list-style: none;
+}
+
+
+hr.ngan{
+    width: 100%;
+    background: black;
+    border-top:2px solid #000000;
+}
+
+
+
+.title{
+    border: 1px solid black;
+    
+    
+}
+
+.nut{
+    margin-top: 30px;
+    
+}
+
+
+.SĐCN{
+    padding-left: 0;
+}
+.jumbotron{
+    margin-top: 20px;
+}
+.Lien-He{
+    text-align: right;
+    padding-top: 65px;
+}
+.Item-CĐ{
+    display: inline-flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: auto;
+    width: 100%;
+}
+.Title-CĐ{
+    margin: 10px 40px;
+    
+}
+.Title-Vs{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.img-CĐ{
+    width: 100px;
+    height: 100px;
+}
+.table-width{
+    width: 100%;
+}
+.img-SDĐB{
+    width: 100%;
+    height: 170px;
+}
+@media only screen and (max-width: 739px){
+.Title-CĐ{
+    margin: 10px 25px;
+    margin: auto;
+}
+.border-KC{
+    /* background-color: #FFFFCC; */
+    border-left: none;
+}
+}
+@media only screen and (min-width:740px) and (max-width: 1025px){
+    .Item-CĐ{
+        display: inline-flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: auto;
+        width: 100%;
+    }
+    .Title-CĐ{
+        margin: 10px 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .Title-Vs{
+        margin-top: 40px;
+    }
+    .img-CĐ{
+        width: 100px;
+        height: 100px;
+    }
+}

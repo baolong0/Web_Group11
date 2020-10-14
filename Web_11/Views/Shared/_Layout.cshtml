@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web_11</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-inverter bg-white border-bottom box-shadow mb-3 sticky-top">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Admin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TinTuc" asp-action="Index">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ThongTinXepHangs" asp-action="index">Bảng Xếp Hạng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LichThiDau">Lịch Thi Đấu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Tickets" asp-action="Index">Mua Vé</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Thongtincobans" asp-action="Index">Thông Tin Đội Bóng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="page-footer font-small teal pt-4">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <div class="row">
+                        <!-- Content -->
+                        <div class="col-md-6 mt-md-6 mt-3">
+
+                            <div class="row">
+                                <h5 class="text-uppercase mt-3 font-weight-bold">Tin Tức Thể Thao</h5>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mt-md-6    mt-3">
+
+                            <div class="row">
+                                <a class="navbar-brand" href="#">
+                                    <img src="https://secureservercdn.net/166.62.108.43/bns.d72.myftpupload.com/wp-content/uploads/2018/12/BongdaEx_2.png" class="img-fluid" alt="Responsive image" height="50" width="100">
+                                </a>
+                            </div>
+
+                        </div>
+                        <p>Tòa soạn: 59c Nguyễn Đình Chiểu, Q.3 ,TP.Hồ Chí Minh</p>
+                        <p> Cơ sở chủ quản: Hội xuất bản Việt Nam</p>
+
+                    </div>
+
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-3 mt-5 ">
+
+                    <!-- Content -->
+                    <p>HotLine: 0523364071</p>
+                    <p>Liên Hệ Quảng Cáo: 0979528720</p>
+                    <p>Liên Kết Qua Các Ứng Dụng:</p>
+                    <a class="fb-ic" style="color: white;font-size: larger;">
+                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="ins-ic" style="color: white;font-size: larger;">
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="#" style="color: white;">QuanLiBongDa.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

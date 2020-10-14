@@ -1,0 +1,102 @@
+/* .team-logo img{
+    width: 100%;
+} */
+/* navbar */
+.navbar-brand img{
+    height: 4rem;
+    }
+    .navbar{
+      font-size: 1.15rem;
+      font-weight: 700;
+      box-shadow: 0 0.5rem 0.5rem rgba(0, 0,0, .2);
+      z-index: 1;
+    }
+    nav-item{
+      padding: .5rem;
+    }
+    .nav-link{
+      color:white !important;
+    }
+    .nav-link.active,
+    .nav-link:hover{
+      color:#32CD32 !important;
+    }
+    /* ---------------------------- */
+    div .row.mt-3.mb-3.ml-5.mr-5 h1{
+      color: green;
+      font-size: 100px;
+      font-weight: 700px;
+    }
+    
+    .schedule{
+        text-align: center;
+    }
+    .HA_KM{
+        background: linear-gradient(270deg,#84d48f7a 30%,#2ddd2d) #1a7503 !important;
+        /* margin: 10px 10px; */
+    }
+    .HA-CĐ{
+        margin: 10px;
+    }
+    .margin-HA-CĐ{
+        margin-bottom: 10px;
+    }
+    .margin-HA-CĐ-main{
+        top: -10px;
+    }
+    .img-QC{
+        height: 390px;
+    }
+    .img-HA-CĐ{
+        height: 200px;
+    }
+    /* #carouselExampleIndicators{
+        margin: 25px 100px 25px;
+    } */
+    .logo img{
+        width: 80%;
+    }
+    .logo {
+        text-align: center;
+    }
+    .logo figure{
+        margin: auto;
+    }
+    .news figure{
+        margin: auto;
+    }
+    .schedule-item{
+        display: flex;
+        list-style: none;
+        margin: auto;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0px;
+    }
+    .img-logo{
+        width: 80px;
+        height: 80px;
+    }
+    .news-main{
+        margin: auto;
+    }
+    figure.vpfMedia{
+        margin: auto;
+    }
+    div.advertisement{
+    margin: auto;
+    }
+    /* footer */
+    div.container-fluid.text-center.text-md-left{
+        background-color: #3399ff !important ;
+      }
+      div.footer-copyright.text-center.py-3{
+        background-color:  #338ffa!important;
+        color: white;
+      }
+      div.footer-copyright.text-center.py-3 a:hover{
+      color: #000 !important;
+      text-decoration: none;
+      }
+      /* --------------------- */
+    

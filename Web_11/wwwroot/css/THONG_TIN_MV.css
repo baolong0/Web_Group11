@@ -1,0 +1,26 @@
+.nav-link:hover{
+    background-color: royalblue;
+}
+.img-QC{
+    height: 280px;
+    width: 100%;
+}
+.img-QC-G{
+    width: 100%;
+    height: 200px;
+}
+.card-header{
+    font-weight: 700;
+    font-size: 1rem;
+}
+.jumbotron{
+    margin-top: 20px;
+}
+.Lien-He{
+    text-align: right;
+    padding-top: 65px;
+}
+.STT_LTĐ{
+   
+    text-align: center;
+}

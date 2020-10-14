@@ -1,0 +1,210 @@
+﻿@model BangXepHangViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" , content="ie=edge">
+    <link rel="stylesheet" href="~/css/Bang_xep_hang.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+    <title>BẢNG XẾP HẠNG</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-xs-9 col-sm-9 col-md-12 col-lg-9">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1> Bảng xếp hạng Cò 1 (2020-2021) </h1>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="table-responsive BXH">
+                            <table class="table table-bordered">
+                                <thead class="thead">
+                                    <tr>
+                                        <th scope="col" width="5%"> TT </th>
+                                        <th scope="col" width="30%"> TÊN ĐỘI BÓNG </th>
+                                        <th scope="col" width="15%"> SỐ TRẬN </th>
+                                        <th scope="col" width="10%"> THẮNG </th>
+                                        <th scope="col" width="10%"> THUA </th>
+                                        <th scope="col" width="10%"> HÒA </th>
+                                        <th scope="col" width="10%"> HIỆU SỐ </th>
+                                        <th scope="col" width="10%"> ĐIỂM </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        for (var i = 0; i <= 11; i++)
+                                        {
+                                            <tr>
+                                               <th scope="row">@i</th>     
+                                               <td>@Model.listbangxephang[i].IDDoiBong</td>
+                                               <td>@Model.listbangxephang[i].SoTran</td>
+                                               <td>@Model.listbangxephang[i].Thang</td>
+                                               <td>@Model.listbangxephang[i].Hoa</td>
+                                               <td>@Model.listbangxephang[i].Thua</td>
+                                               <td>@Model.listbangxephang[i].HieuSo</td>
+                                               <td>@Model.DiemXepHang[i].Diem</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-3 col-sm-3 hiden-md col-lg-3 hide">
+
+                <div class="row mt-4">
+                    <div class="col-xs-12 col-sm-12 hiden-md col-lg-12 San-sale">
+                        <div class="SAN_SALE">
+                            <h2> Săn sale </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-xs-12 col-sm-12 hiden-md col-lg-12 San-sale">
+                        <div class="card card-Common-responsive">
+                            <a href="#">
+                                <img class="card-img-top img-fluid" src="img/Quang_cao.png" />
+                                <div class="card-body">
+                                    <p class="card-title"> Mua vé online ngay hôm nay </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-3">
+                    <div class="col-xs-12 col-sm-12 hiden-md col-lg-12 San-sale">
+                        <div class="card card-Common-responsive">
+                            <a href="#">
+                                <img class="card-img-top img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQJbpN8vfauG6D6-2UDEEA7bz6-9OK3gGRwA&usqp=CAU" />
+                                <div class="card-body">
+                                    <p class="card-title"> Quả bóng vàng </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+              <div class="row mt-3">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <table class="table2-responsive">
+                  <table class="table2">
+                    <thead class="thead">
+                      <tr>
+                        <th scope="col" width="100%"> GIẢI ĐẤU YÊU THÍCH </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr> <td> <a href="#"> Cò 1 </a> </td> </tr>
+                      <tr> <td> <a href="#"> Cò 2 </a> </td> </tr>
+                      <tr> <td> <a href="#"> Cò 3 </a> </td> </tr>
+                      <tr> <td> <a href="#"> Cò 4 </a> </td> </tr>
+                      <tr> <td> <a href="#"> Cò 5 </a> </td> </tr>
+                      <tr> <td> <a href="#"> Cò 6 </a> </td> </tr>
+                    </tbody>
+                  </table>
+                </table>
+              </div>
+            </div>
+            -->
+
+
+        </div>
+    </div>
+
+
+    <!--Chỉ hiện ở tablet-->
+    <div class="container ">
+        <div class="row mt-4">
+
+            <div class="col-xs-12 hiden-sm col-md-12 hiden-lg Hien">
+                <div class="row">
+
+                    <div class="col-xs-4 hiden-sm visible-md hiden-lg">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="card card-Common-responsive">
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="img/Quang_cao.png" />
+                                        <div class="card-body">
+                                            <p class="card-title"> Mua vé online ngay hôm nay </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-4 hiden-sm visible-md hiden-lg">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="card card-Common-responsive">
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQJbpN8vfauG6D6-2UDEEA7bz6-9OK3gGRwA&usqp=CAU" />
+                                        <div class="card-body">
+                                            <p class="card-title"> Quả bóng vàng </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-4 hiden-sm visible-md hiden-lg">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="card card-Common-responsive">
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQJbpN8vfauG6D6-2UDEEA7bz6-9OK3gGRwA&usqp=CAU" />
+                                        <div class="card-body">
+                                            <p class="card-title"> Quả bóng vàng </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

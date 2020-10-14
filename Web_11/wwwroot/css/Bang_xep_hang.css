@@ -1,0 +1,50 @@
+h3{
+    text-align: center;
+    padding: 10px;
+}
+.BXH{
+    border: 1px  gray;
+    text-align: center;
+}
+.BXH thead{
+    background: green;
+    color:white;
+}
+
+.card img{
+    width: 100%;
+}
+
+@media only screen and (min-width:375px) and (max-width:700px){
+    .hide{
+        display: none;
+    }
+    .title{
+        font-size: 0.6rem;
+        padding: 0;
+    }
+    
+}
+@media only screen and (min-width:768px) and (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+@media only screen and (min-width:1020px) {
+    .container .hien{
+        display: none;
+    }
+}
+
+.img{
+    margin: auto;
+  }
+.row .mt-3 .mb-3
+  {
+    border-bottom: 1px solid black;
+  } 
+  tbody tr:hover{
+    background-color: gainsboro;
+}
+
+

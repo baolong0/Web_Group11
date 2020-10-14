@@ -1,0 +1,50 @@
+﻿@model Web_11.Models.data.SubTintuc
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateSubTinTuc</title>
+</head>
+<body>
+
+<h4>SubTintuc</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateSubTinTuc">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdTintuc" class="control-label"></label>
+                <select asp-for="IdTintuc" class ="form-control" asp-items="ViewBag.IdTintuc"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdHinhAnh" class="control-label"></label>
+                <select asp-for="IdHinhAnh" class ="form-control" asp-items="ViewBag.IdHinhAnh"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdNoiDung" class="control-label"></label>
+                <select asp-for="IdNoiDung" class ="form-control" asp-items="ViewBag.IdNoiDung"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdHashtag" class="control-label"></label>
+                <select asp-for="IdHashtag" class ="form-control" asp-items="ViewBag.IdHashtag"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

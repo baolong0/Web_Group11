@@ -1,0 +1,353 @@
+﻿@model ChitietthongtincobanModel
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/VLeague-TeamProfile.css">
+<div class="container">
+    <div class="row general">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <div class="row introduce mt-3">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>Giới thiệu</h2>
+                    <!--Ảnh bìa đội bóng-->
+                    <div class="team-banner">
+                        <figure>
+                            <img class="img-fluid" src="@Model.Doibong.SourceBanner" alt="SLNA FC" />
+                            <figcaption><strong>@Model.Doibong.TenDoi</strong></figcaption>
+                        </figure>
+                    </div>
+
+                    <!--Thông tin liên quan-->
+                    <div class="related-information">
+                        <p>Địa chỉ :@Model.thongtincoban.DiaChi</p>
+                        <p>Hotline :@Model.thongtincoban.Hotline</p>
+                        <p>Email: @Model.thongtincoban.Email</p>
+                        <p><strong>Website: </strong><a href="@Model.thongtincoban.Website" target=_blank>www.slnafc.com</a></p>
+                        <p>Sân vận động: <strong>@Model.thongtincoban.SanVanDong</strong></p>
+                        <p>Sức chứa: @Model.thongtincoban.SucChua</p>
+                        <p>Chủ tịch CLB: Ông <strong>@Model.thongtincoban.ChuTichClb</strong></p>
+                        <p>GĐĐH: Ông <strong>@Model.thongtincoban.Gđdh</strong></p>
+                        <p>HLV trưởng: Ông <strong>@Model.thongtincoban.Hlvtruong</strong></p>
+                        <p>GĐKT: Ông <strong>@Model.thongtincoban.Gđkt</strong></p>
+                        <p>Nhà tài trợ chính: <strong>@Model.thongtincoban.NhaTaiTro</strong></p>
+                    </div>
+                    <br>
+
+                    <!--Thành tích đạt được-->
+                    <div class="team-achievement">
+                        <ul class="achievement">
+                            <h5>Thành tích đạt được:</h5>
+                            <li>
+                                <ul class="achievement-small">
+                                    <h5>1. Đội tuyển 1 SLNA:</h5>
+                                    @foreach (var item in Model.ThanhTichLoai1)
+                                    {
+                                        if (item.value != null)
+                                        {
+                                            <li class="main-inside">@item.display</li>
+                                        }
+
+
+                                    }
+
+
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="achievement-small">
+                                    <h5>2. Tập thể CLB:</h5>
+                                    @foreach (var item in Model.ThanhTichLoai2)
+                                    {
+                                        if (item.value != null)
+                                        {
+                                            <li class="main-inside">@item.display</li>
+                                        }
+
+                                    }
+                                </ul>
+                            </li>
+                            @*<li>
+                                    <ul class="achievement-small">
+                                        <h5>3. Thành tích các đội trẻ:</h5>
+                                        <li class="main-inside">Đội U19: Vô địch quốc gia 5 lần (kỷ lục quốc gia) các năm: 1999, 2001, 2004, 2005, 2006</li>
+                                        <li class="main-inside">Đội U17: Vô địch quốc gia 7 lần (kỉ lục quốc gia) các năm: 2004, 2005, 2006, 2007, 2008, 2009, 2012</li>
+                                        <li class="main-inside">Đội U15: Vô địch quốc gia 3 lần năm: 2002, 2018, 2019</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="achievement-small">
+                                        <h5>4. Vận động viên tiêu biểu:</h5>
+                                        <li class="main-inside">Võ Văn Hạnh: QBV VN năm 2001</li>
+                                        <li class="main-inside">Lê Công Vinh: Dành danh hiệu QBV các năm (2004, 2006, 2007) QBB năm 2005</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="achievement-small">
+                                        <h5>5. Cầu thủ trẻ xuất sắc nhất:</h5>
+                                        <li class="main-inside">Phạm Văn Quyến: Năm 2000, 2002</li>
+                                        <li class="main-inside">Lê Công Vinh: Năm 2004</li>
+                                    </ul>
+                                </li>*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!--Hồ sơ cầu thủ-->
+            <div class="container">
+                <div class="row player-profile">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Hồ sơ cầu thủ</h2>
+                        <div id="carouselExampleControls" class="carousel slide mt-5" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!--Trang 1-->
+                                <div class="carousel-item active">
+                                    <div class="card-deck">
+
+                                        <!--Cầu thủ 1-->
+                                        <div class="card">
+                                            <img src="@Model.Cauthuteam[0].HA_Cau_Thu" alt="Nguyễn Hồng Quân">
+                                            <p class="card-title">@Model.Cauthuteam[0].Ten_Cau_Thu</p>
+                                        </div>
+
+                                        <!--Cầu thủ 2-->
+                                        <div class="card">
+                                            <img src="@Model.Cauthuteam[1].HA_Cau_Thu" alt="Võ Ngọc Đức">
+                                            <p class="card-title">@Model.Cauthuteam[1].Ten_Cau_Thu</p>
+                                        </div>
+
+                                        <!--Cầu thủ 3-->
+                                        <div class="card">
+                                            <img src="@Model.Cauthuteam[2].HA_Cau_Thu" alt="Phạm Thế Nhật">
+                                            <p class="card-title">@Model.Cauthuteam[2].Ten_Cau_Thu</p>
+                                        </div>
+
+                                        <!--Cầu thủ 4-->
+                                        <div class="card">
+                                            <img src="@Model.Cauthuteam[3].HA_Cau_Thu" alt="Bùi Đình Châu">
+                                            <p class="card-title">@Model.Cauthuteam[3].Ten_Cau_Thu</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Trang 2-->
+                                <div class="carousel-item">
+                                    <div class="card-deck">
+
+                                        <!--Cầu thủ 1-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/5-Hoang-Van-Khanh-150x150.jpg" alt="Hoàng Văn Khánh">
+                                            <p class="card-title">Hoàng Văn Khánh</p>
+                                        </div>
+
+                                        <!--Cầu thủ 2-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/6-Ho-Sy-Sam-150x150.jpg" alt="Hồ Sỹ Sâm">
+                                            <p class="card-title">Hồ Sỹ Sâm</p>
+                                        </div>
+
+                                        <!--Cầu thủ 3-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/7-Pham-Xuan-Mamh-150x150.jpg" alt="Phạm Xuân Mạnh">
+                                            <p class="card-title">Phạm Xuân Mạnh</p>
+                                        </div>
+
+                                        <!--Cầu thủ 4-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/8-Ho-Phuc-Tinh-150x150.jpg" alt="Hồ Phúc Tịnh">
+                                            <p class="card-title">Hồ Phúc Tịnh</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Trang 3-->
+                                <div class="carousel-item">
+                                    <div class="card-deck">
+
+                                        <!--Cầu thủ 1-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/10-Ho-Tuan-Tai-150x150.jpg" alt="Hồ Tuấn Tài">
+                                            <p class="card-title">Hồ Tuấn Tài</p>
+                                        </div>
+
+                                        <!--Cầu thủ 2-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2018/12/11-Nguyen-Phu-Nguyen-150x150.jpg" alt="Nguyễn Phú Nguyên">
+                                            <p class="card-title">Nguyễn Phú Nguyên</p>
+                                        </div>
+
+                                        <!--Cầu thủ 3-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2020/02/12-Dang-Van-Lam-150x150.jpg" alt="Đặng Văn Lắm">
+                                            <p class="card-title">Đặng Văn Lắm</p>
+                                        </div>
+
+                                        <!--Cầu thủ 4-->
+                                        <div class="card">
+                                            <img src="https://vpf.vn/wp-content/uploads/2020/01/14-Nguyen-Van-Viet-150x150.jpg" alt="Nguyễn Văn Việt">
+                                            <p class="card-title">Nguyễn Văn Việt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr width="75%" size="5px" color="green" />
+
+            <!--Các nhà tài trợ của đội bóng-->
+            <div class="container">
+                <div class="row sponsor">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row sponsor-1">
+                            <ul class="donor-item">
+                                <li class="donor-element">
+                                    <a href="https://www.baca-bank.vn/SitePages/trang-chu.aspx" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk0IoFEH04MjdBXksFb9tQRz4fEyfjGTgZ5A&usqp=CAU" width="200" height="200" alt="...">
+                                    </a>
+                                </li>
+                                <li class="donor-element">
+                                    <a href="http://www.thmilk.vn/" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSoy_JxVgS3ELwSwHI_5bV6vCzixFEK1dovAw&usqp=CAU" width="200" height="200" alt="...">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row sponsor-2">
+                            <ul class="donor-item">
+                                <li class="donor-element">
+                                    <a href="https://dongluc.vn/" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVkUXoKcA5d6fQpXAAVimoghCg7gAfCb_r1Q&usqp=CAU" width="120" height="120" alt="...">
+                                    </a>
+                                </li>
+                                <li class="donor-element">
+                                    <a href="https://www.vietnamairlines.com/no/vi/home" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwyZCmBzaYcdiS494RfK0ci03sTIBxsX3Ykg&usqp=CAU" class="mt-3" width="200" height="80" alt="...">
+                                    </a>
+                                </li>
+                                <li class="donor-element">
+                                    <a href="https://www.hoaphat.com.vn/" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSgoavkWi1FBe9veEFMafSFrK5-LSSO2GE-tw&usqp=CAU" width="120" height="120" alt="...">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Thông tin liên hệ-->
+            <div class="container mt-5">
+                <div class="row hot-line">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="contact-item">
+                            <li class="contact-element">
+                                <a href="https://www.youtube.com/slnafc" target="_blank">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTj23ZtcBP9FPDeu6fX13SPlP4KY9tPSywyww&usqp=CAU" width="50" height="50" alt="...">
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://plus.google.com/u/0/108541064020130319795" target="_blank">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbovZUVkmUnE_NRFnvL1XhFdHC1hX--iSw1g&usqp=CAU" width="50" height="50" alt="...">
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://www.facebook.com/SLNAFC" target="_blank">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/FaceB.png" width="50" height="50" alt="...">
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://twitter.com/slnafc" target="_blank">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQQotFWSNY3z4I6fRN10dOjBRVOt0rmKp9pw&usqp=CAU" width="50" height="50" alt="...">
+                                </a>
+                            </li>
+                            <li class="contact-element">
+                                <a href="https://www.instagram.com/slnafc/" target="_blank">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdk-3SeEWHKW-gKsWaz3XgxEEIie8aTGZ5wA&usqp=CAU" width="50" height="50" alt="...">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row video-clip">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <h5 class="card-header fab fa-youtube" style="color: red;"> Video Clip</h5>
+                        <div class="card-body">
+                            <div class="video-highlight">
+                                <iframe width="100%" height="250"
+                                        src="https://www.youtube.com/embed/o-wGDVYUiMY">
+                                </iframe>
+                            </div>
+                            <h5 class="card-title">Đánh bại Viettel, SLNA chấm dứt chuỗi trận thất vọng | VPF Media</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row video-clip">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="video-highlight">
+                        <iframe width="100%" height="250"
+                            src="https://www.youtube.com/embed/o-wGDVYUiMY">
+                        </iframe>
+                    </div>
+                </div>
+            </div>    -->
+            <div class="row advertisement">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="advertising-information">
+                        <a href="https://www.baca-bank.vn/SitePages/trang-chu.aspx" target=_blank><img src="http://www.slnafc.com/data_news/qc-3419.jpg" width="100%" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row advertisement">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="advertising-information">
+                        <a href="https://www.vietnamairlines.com/vn/vi/home" target=_blank><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx7iK3VpLF9Me5EGdLuuhR9c3iWSnteHIBuw&usqp=CAU" width="100%" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row fanpage">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="team-fanpage">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSLNAFC%2F&tabs=timeline&width=400px&height=600px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="600px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row schedule">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="team-schedule">
+                        <div class="card">
+                            <a href="#">
+                                <div class="card-body far fa-calendar-alt">
+                                    LỊCH THI ĐẤU SLNA FC 2020
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

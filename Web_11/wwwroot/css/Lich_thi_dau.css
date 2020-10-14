@@ -1,0 +1,66 @@
+#datepicker {
+    text-align: left;
+    color: red;
+}
+.table-responsive-md {
+    text-align: center;   
+   
+}
+.table-responsive-md thead {
+    background: green;
+    color: white;     
+    border-style: groove;
+    border-color: gray;
+}
+.table-responsive-md table, th, td{
+    border-style: groove;
+    border-color: gray;
+}
+.table{
+    width: 100%;
+}
+tbody tr:hover{
+    background-color: gainsboro;
+}
+
+.lich{
+    align-items: right;
+    
+}
+
+
+.card-header{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.SAN_SALE{
+    color: red;
+    
+}   
+
+@media only screen and (min-width:375px) and (max-width: 1000px){
+    .hide{
+        display: none;
+    }
+    .container h2{
+        text-align: center;
+    }
+    #datepicker{
+        align-items: flex-end;
+    }
+   
+    .Hien .card-img-top{
+        height: 220px;
+    }
+    
+}
+@media only screen and (min-width:1020px){
+    .Hien{
+        display: none;
+    }
+    .SAN_SALE{
+        color: red;
+        margin: auto;
+    } 
+}

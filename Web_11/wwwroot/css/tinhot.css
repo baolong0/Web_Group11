@@ -1,0 +1,54 @@
+
+html,body{
+  width:100%;
+  height:100%;
+  color:black;
+
+}
+.hashtag{
+    font-size: 30px ;
+    display:flex;  
+    list-style: none;   
+    margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  
+  }
+.hashtag li{
+    margin-left: 20px;
+  }
+.row .mt-3 .mb-3
+  {
+    border-bottom: 1px solid black;
+  }  
+.img{
+    margin: auto;
+  }
+  /* img.card-img{
+    width:125px;
+    height:200px; */
+  
+.jumbotron{
+    margin-top: 20px;
+  }
+.Lien-He{
+    text-align: right;
+    padding-top: 65px;
+  }
+.row .comment{
+  background-color: gainsboro;
+  
+}
+.row .QC{
+  margin-top: auto;
+}
+
+/* .hidden-lg{ 
+      display: none;
+    }
+@media only screen and (min-width:740px) and (max-width:1023px){
+  .hidden-md{ 
+    display: none;
+  }
+}
+@media only screen and (max-width: 739px){
+  
+} */

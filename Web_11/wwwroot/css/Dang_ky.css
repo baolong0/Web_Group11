@@ -1,0 +1,49 @@
+.Avarta{
+    width: 90%;
+    align-items: center;
+}
+.card h1{
+    text-transform: uppercase;
+    font-weight: 500px ;
+}
+.card .card-header{
+    background:rgb(2, 71, 2);
+    color: white;
+}
+.card .box{
+    padding: 20px;
+}
+.box input[type="text"], .box input[type="tel"], .box input[type="email"], .box input[type="password"]{
+    border: 2px solid #3498db;
+    
+}
+@media only screen and (max-width: 576px){
+    .hide img{
+        display: none;
+    }
+}
+
+.box input[type="submit"]{
+    background:  none;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 12px 30px;
+    outline: none;
+    color: black;
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+    background:  #2ecc71;
+}
+
+.jumbotron{
+    margin-top: 20px;
+}
+.Lien-He{
+    text-align: right;
+    padding-top: 65px;
+}

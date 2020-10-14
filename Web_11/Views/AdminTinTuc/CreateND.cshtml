@@ -1,0 +1,36 @@
+﻿@model Web_11.Models.data.Noidung
+
+@{
+    Layout = null;
+    }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="CreateND">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="TextNoiDung" class="control-label"></label>
+                    <input asp-for="TextNoiDung" class="form-control" />
+                    <span asp-validation-for="TextNoiDung" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="CreateHA">Next</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a asp-action="FinishCreateTT">Finish</a>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>

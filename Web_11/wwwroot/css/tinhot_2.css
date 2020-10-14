@@ -1,0 +1,36 @@
+html,body{
+    width:100%;
+    height:100%;
+    color:black;
+    margin: auto;
+  
+  
+  }
+  .hashtag{
+      font-size: 30px ;
+      display:flex;  
+      list-style: none;   
+      margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    
+    }
+  .hashtag li{
+      margin-left: 20px;
+    }
+  .row .mt-3 .mb-3
+    {
+      border-bottom: 1px solid black;
+    }  
+  .TinChinh .img{
+      margin: auto;
+      align-items: center;
+    }
+    
+    
+  
+  .row .comment{
+    background-color: gainsboro;
+    
+  }
+  .row .QC{
+    margin-top: auto;
+  }
